@@ -1,0 +1,127 @@
+<html>
+<header>
+    <style>
+        /* Popup container */
+        .popup {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        /* The actual popup (appears on top) */
+        .popup .popuptext {
+            visibility: hidden;
+            width: 160px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -80px;
+        }
+
+        /* Popup arrow */
+        .popup .popuptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        /* Toggle this class when clicking on the popup container (hide and show the popup) */
+        .popup .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s
+        }
+
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</header>
+
+<body>
+    <h1>TEST</h1>
+    <h1 id="demo"></h1>
+    <a href="myunifi://inbox"><h1>myunifi://inbox</h1></a>
+    <a href="myunifi://planDetails/LBSSCUQ24002"><h1>myunifi://planDetails/LBSSCUQ24002</h1></a>
+    <a href="myunifi://unificares"><h1>myunifi://unificares</h1></a>
+    <a href="myunifi://FreeUPB/go"><h1>myunifi://FreeUPB/go</h1></a>
+    <a href="myunifi://account"><h1>myunifi://account</h1></a>
+    <a href="myunifi://unifihome"><h1>myunifi://unifihome</h1></a>
+    <a href="myunifi://addon/MESH"><h1>myunifi://addon/MESH</h1></a>
+    <a href="myunifi://addon/UPB"><h1>myunifi://addon/UPB</h1></a>
+    <a href="myunifi://addon/SMARTDEVICE"><h1>myunifi://addon/SMARTDEVICE</h1></a>
+    <a href="myunifi://rewards"><h1>myunifi://rewards</h1></a>
+    <a href="myunifi://rewards/my"><h1>myunifi://rewards/my</h1></a>
+    <a href="myunifi://rewards/item/2795"><h1>myunifi://rewards/item/2795</h1></a>
+    <a href="myunifi://rewards/item/1806"><h1>myunifi://rewards/item/1806</h1></a>
+
+    <a href="myunifi://rewards/item/1805"><h1>myunifi://rewards/item/1805 (PREPROD)</h1></a>
+    <a href="myunifi://rewards/item/1808"><h1>myunifi://rewards/item/1808 (PREPROD)</h1></a>
+    <a href="myunifi://rewards/item/1817"><h1>myunifi://rewards/item/1817 (PREPROD)</h1></a>
+
+    <a href="myunifi://planDetails/LBSP0C12UQ00HA"><h1>myunifi://planDetails/LBSP0C12UQ00HA</h1></a>
+    <a href="myunifi://planDetails/LBSSCUQ00003"><h1>myunifi://planDetails/LBSSCUQ00003</h1></a>
+    <a href="myunifi://fun"><h1>myunifi://fun</h1></a>
+    <a href="myunifi://planList/Device"><h1>myunifi://planList/Device</h1></a>
+    <a href="myunifi://someRandomPath"><h1>myunifi://someRandomPath</h1></a>
+    <a href="https://my.unifi.com.my/smartdevice/app"><h1>https://my.unifi.com.my/smartdevice/app</h1></a>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- <img src="images/test.jpg" /> -->
+    <!-- <div class="popup" onclick="myFunction()">Click me!
+        <span class="popuptext" id="myPopup">Popup text...</span>
+    </div> -->
+    <script>
+        // When the user clicks on <div>, open the popup
+        function myFunction() {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+        }
+        function getPlatform() {
+            var x = "Platform: " + navigator.platform;
+            document.getElementById("demo").innerHTML = x;
+        }
+        window.onload = getPlatform()
+    </script>
+</body>
+
+</html>
